@@ -16,17 +16,42 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-globe-europe prefix green-text"></i>
-                    <input id="recipe_cuisine" name="recipe_cuisine" minlength="5" maxlength="50"
-                     type="text" class="validate" required>
-                    <label for="recipe_cuisine">Cuisine</label>
+                    <select id="recipe_cuisine name="recipe_cuisine" class="validate" required>
+                        <option value="" disabled selected>Choose Your Cuisine</option>
+                        <option value="1">Italian</option>
+                        <option value="2">French</option>
+                        <option value="3">Spanish</option>
+                        <option value="3">Mexican</option>
+                        <option value="3">Indian</option>
+                        <option value="3">Japanese</option>
+                        <option value="3">Chinese</option>
+                        <option value="3">Irish</option>
+                        <option value="3">Greek</option>
+                        <option value="3">American</option>
+                        <option value="3">Mediteraninan</option>
+                        <option value="3">English</option>
+                    </select>
+                        <label for="recipe_cuisine">Cuisine</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-clock prefix green-text"></i>
-                    <input id="recipe_time" name="recipe_time" minlength="5" maxlength="25"
-                     type="text" class="validate" required>
-                    <label for="recipe_time">Time</label>
+                     <select id="recipe_time" name="recipe_time" class="validate" required>
+                        <option value="" disabled selected>Time Duration</option>
+                        <option value="1">Less Than 15 Minutes</option>
+                        <option value="2">Less Than 30 Minutes</option>
+                        <option value="3">Less Than 45 Minutes</option>
+                        <option value="3">Less Than 1 Hour</option>
+                        <option value="3">Less Than 1 Hour 30 Minutes</option>
+                        <option value="3">Less Than 2 Hours</option>
+                        <option value="3">Less Than 3 Hours</option>
+                        <option value="3">Less Than 4 Hours</option>
+                        <option value="3">Less Than 5 Hours</option>
+                        <option value="3">Less Than 6 Hours</option>
+                        <option value="3">Over Night</option>
+                    </select>
+                        <label for="recipe_time">Time</label>
                 </div>
             </div>
             <div class="row">
