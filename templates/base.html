@@ -26,7 +26,7 @@
 					<li><a href="#">Manage Categories</a></li>
 					<li><a href="#">Shop</a></li>
 					<li><a href="#">Log Out</a></li>
-					<li><a href="#">Log In</a></li>
+					<li><a href="{{ url_for('login') }}">Log In</a></li>
 					<li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
 				</ul>
 			</div>
@@ -41,7 +41,7 @@
             <li><a href="#" class="green-text">Manage Categories</a></li>
             <li><a href="#" class="green-text">Shop</a></li>
             <li><a href="#" class="green-text">Log Out</a></li>
-            <li><a href="#" class="green-text">Log In</a></li>
+            <li><a href="{{ url_for('login') }}" class="green-text">Log In</a></li>
             <li><a href="{{ url_for('sign_up') }}" class="green-text">Sign Up</a></li>
 		</ul>
     </header>
