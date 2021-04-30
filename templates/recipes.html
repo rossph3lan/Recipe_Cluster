@@ -8,9 +8,12 @@
         <li>
             <div class="collapsible-header white-text green text-shadow">
                 <i class="fas fa-caret-down"></i>
-                <strong>{{ recipe.recipe_name }}, {{ recipe.recipe_cuisine }}, {{ recipe.recipe_time }}</strong>
+                <strong>{{ recipe.recipe_name }}</strong>
             </div>
             <div class="collapsible-body">
+                <p><strong>Type</strong> : {{ recipe.recipe_type }}</p>
+                <p><strong>Cuisine</strong> : {{ recipe.recipe_cuisine }}</p>
+                <p><strong>Time</strong> : {{ recipe.recipe_time }}</p>
                 <p><strong>Ingredients</strong> : {{ recipe.recipe_ingredients }}</p>
                 <p><strong>Method</strong> : {{ recipe.recipe_method }}</p>
                 <p><em>By : {{ recipe.created_by }}</em></p>
