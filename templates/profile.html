@@ -11,4 +11,20 @@
         </div>
     </div>
 
+    <ul class="collapsible">
+        {% for recipe in recipes %}
+        <li>
+            <div class="collapsible-header white-text green text-shadow">
+                <i class="fas fa-caret-down"></i>
+                <strong>{{ recipe.recipe_name }}, {{ recipe.recipe_cuisine }}, {{ recipe.recipe_time }}</strong>
+            </div>
+            <div class="collapsible-body">
+                <strong>{{ recipe.category_name }}</strong>
+                <p>Ingredients : {{ recipe.recipe_ingredients }}</p>
+                <p>Method : {{ recipe.recipe_method }}</p>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+
 {% endblock %}
