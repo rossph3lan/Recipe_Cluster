@@ -3,8 +3,10 @@
 
     <h3 class="green-text center-align">Add Recipe</h3>
 
+    <!--Recipe Form-->
     <div class="row card-panel grey lighten-5">
-        <form class="col s12" method="POST" action="">
+        <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
+            <!--Recipe Name-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-apple-alt prefix green-text"></i>
@@ -13,6 +15,7 @@
                     <label for="recipe_name">Recipe</label>
                 </div>
             </div>
+            <!--Cuisine Selector-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-globe-europe prefix green-text"></i>
@@ -34,6 +37,7 @@
                         <label for="recipe_cuisine">Cuisine</label>
                 </div>
             </div>
+            <!--Recipe Time Selector-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-clock prefix green-text"></i>
@@ -54,6 +58,7 @@
                         <label for="recipe_time">Time</label>
                 </div>
             </div>
+            <!--Recipe Ingredients-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-cheese prefix green-text"></i>
@@ -61,11 +66,20 @@
                     <label for="recipe_ingredients">Ingredients</label>
                 </div>
             </div>
+            <!--Recipe Method-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-angle-double-down prefix green-text"></i>
                     <textarea id="recipe_method" name="recipe_method" class="materialize-textarea" required></textarea>
                     <label for="recipe_method">Method</label>
+                </div>
+            </div>
+            <!--Submit Button-->
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button type="submit" class="btn-large green text-shadow">
+                        Add Recipe <i class="fas fa-plus-square right"></i>
+                    </button>
                 </div>
             </div>
         </form>

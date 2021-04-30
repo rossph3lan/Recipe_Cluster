@@ -9,9 +9,9 @@
                 <strong>{{ recipe.recipe_name }}, {{ recipe.recipe_cuisine }}, {{ recipe.recipe_time }}</strong>
             </div>
             <div class="collapsible-body">
-                <strong>{{ recipe.category_name }}</strong>
-                <p>Ingredients : {{ recipe.recipe_ingredients }}</p>
-                <p>Method : {{ recipe.recipe_method }}</p>
+                <p><strong>Ingredients</strong> : {{ recipe.recipe_ingredients }}</p>
+                <p><strong>Method</strong> : {{ recipe.recipe_method }}</p>
+                <p><em>By : {{ recipe.created_by }}</em></p>
             </div>
         </li>
         {% endfor %}
