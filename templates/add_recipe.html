@@ -3,23 +3,44 @@
 
     <h3 class="green-text center-align">Add Recipe</h3>
 
-    <div class="row">
+    <div class="row card-panel grey lighten-5">
         <form class="col s12" method="POST" action="">
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-apple-alt prefix green-text"></i>
-                    <input id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">Recipe Name</label>
+                    <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50"
+                     type="text" class="validate" required>
+                    <label for="recipe_name">Recipe</label>
                 </div>
+            </div>
+            <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-globe-europe prefix green-text"></i>
-                    <input id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">Cuisine</label>
+                    <input id="recipe_cuisine" name="recipe_cuisine" minlength="5" maxlength="50"
+                     type="text" class="validate" required>
+                    <label for="recipe_cuisine">Cuisine</label>
                 </div>
+            </div>
+            <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-clock prefix green-text"></i>
-                    <input id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">Time</label>
+                    <input id="recipe_time" name="recipe_time" minlength="5" maxlength="25"
+                     type="text" class="validate" required>
+                    <label for="recipe_time">Time</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-cheese prefix green-text"></i>
+                    <textarea id="recipe_ingredients" name="recipe_ingredients" class="materialize-textarea" required></textarea>
+                    <label for="recipe_ingredients">Ingredients</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-angle-double-down prefix green-text"></i>
+                    <textarea id="recipe_method" name="recipe_method" class="materialize-textarea" required></textarea>
+                    <label for="recipe_method">Method</label>
                 </div>
             </div>
         </form>
