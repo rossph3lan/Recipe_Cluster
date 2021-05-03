@@ -21,16 +21,16 @@
 				<a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-arrow-circle-down"></i></a>
 				<ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
-                    {% if session.user %}
-                        <li><a href="{{ url_for('profile', username=session['user']) }}">My Recipes</a></li>
-                        <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
-                        <li><a href="#">Manage Categories</a></li>
-                        <li><a href="#">Shop</a></li>
-                        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-                    {% else %}
-                        <li><a href="{{ url_for('login') }}">Log In</a></li>
-                        <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
-                    {% endif %}
+            {% if session.user %}
+                <li><a href="{{ url_for('profile', username=session['user']) }}">My Recipes</a></li>
+                <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
+                <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+            {% else %}
+                <li><a href="{{ url_for('login') }}">Log In</a></li>
+                <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
+            {% endif %}
 				</ul>
 			</div>
 		</nav>
@@ -42,7 +42,7 @@
             {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}" class="green-text">My Recipes</a></li>
                 <li><a href="{{ url_for('add_recipe') }}" class="green-text">Add Recipe</a></li>
-                <li><a href="#" class="green-text">Manage Categories</a></li>
+                <li><a href="{{ url_for('get_categories') }}" class="green-text">Manage Categories</a></li>
                 <li><a href="#" class="green-text">Shop</a></li>
                 <li><a href="{{ url_for('logout') }}" class="green-text">Log Out</a></li>
             {% else %}

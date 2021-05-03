@@ -104,11 +104,15 @@ def add_recipe():
     if request.method == "POST":
         recipe = {
                 "recipe_name": request.form.get("recipe_name"),
-                "recipe_type": request.form.get("recipe_type"),
                 "recipe_cuisine": request.form.get("recipe_cuisine"),
+                "recipe_type": request.form.get("recipe_type"),
                 "recipe_time": request.form.get("recipe_time"),
+                "recipe_serving": request.form.get("recipe_serving"),
+                "recipe_allergies": request.form.get("recipe_allergies"),
                 "recipe_ingredients": request.form.get("recipe_ingredients"),
+                "recipe_equiptment": request.form.get("recipe_equiptment"),
                 "recipe_method": request.form.get("recipe_method"),
+                "recipe_notes": request.form.get("recipe_notes"),
                 "created_by": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
@@ -123,12 +127,16 @@ def add_recipe():
 def edit_recipe(recipe_id):
     if request.method == "POST":
         submit = {
-            "recipe_name": request.form.get("recipe_name"),
-                "recipe_type": request.form.get("recipe_type"),
+                "recipe_name": request.form.get("recipe_name"),
                 "recipe_cuisine": request.form.get("recipe_cuisine"),
+                "recipe_type": request.form.get("recipe_type"),
                 "recipe_time": request.form.get("recipe_time"),
+                "recipe_serving": request.form.get("recipe_serving"),
+                "recipe_allergies": request.form.get("recipe_allergies"),
                 "recipe_ingredients": request.form.get("recipe_ingredients"),
+                "recipe_equiptment": request.form.get("recipe_equiptment"),
                 "recipe_method": request.form.get("recipe_method"),
+                "recipe_notes": request.form.get("recipe_notes"),
                 "created_by": session["user"]
         }  
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
@@ -144,6 +152,12 @@ def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted")
     return redirect(url_for("get_recipes"))
+
+
+@app.route("/get_categories")
+def get_categories():
+    categories = list(mongo.db.categories.find().sort("category_name", 1))
+    return render_template("categories.html", categories=categories)
 
 
 if __name__ == "__main__":

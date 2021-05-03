@@ -19,11 +19,15 @@
                 </div>
             </div>
             <div class="collapsible-body">
-                <p><strong>Type</strong> : {{ recipe.recipe_type }}</p>
                 <p><strong>Cuisine</strong> : {{ recipe.recipe_cuisine }}</p>
+                <p><strong>Type</strong> : {{ recipe.recipe_type }}</p>
                 <p><strong>Time</strong> : {{ recipe.recipe_time }}</p>
+                <p><strong>Serves</strong> : {{ recipe.recipe_serving }}</p>
+                <p><strong>Allergens</strong> : {{ recipe.recipe_allergies }}</p>
                 <p><strong>Ingredients</strong> : {{ recipe.recipe_ingredients }}</p>
+                <p><strong>Equiptment</strong> : {{ recipe.recipe_equiptment }}</p>
                 <p><strong>Method</strong> : {{ recipe.recipe_method }}</p>
+                <p><strong>Notes</strong> : {{ recipe.recipe_notes }}</p>
                 <p><em>By : {{ recipe.created_by }}</em></p>
             </div>
         </li>

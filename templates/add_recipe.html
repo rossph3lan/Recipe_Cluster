@@ -9,10 +9,32 @@
             <!--Recipe Name-->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-apple-alt prefix green-text"></i>
+                    <i class="fas fa-file-signature prefix green-text"></i>
                     <input id="recipe_name" name="recipe_name" minlength="2" maxlength="75"
                      type="text" class="validate" required>
-                    <label for="recipe_name">Recipe</label>
+                    <label for="recipe_name">Name</label>
+                </div>
+            </div>
+            <!--Cuisine Selector-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-globe-europe prefix green-text"></i>
+                    <select id="recipe_cuisine" name="recipe_cuisine" class="validate" required>
+                        <option value="" disabled selected>Choose Your Cuisine</option>
+                        <option value="Global">Global</option>
+                        <option value="Irish">Irish</option>
+                        <option value="English">English</option>
+                        <option value="Italian">Italian</option>
+                        <option value="French">French</option>
+                        <option value="Spanish">Spanish</option>                       
+                        <option value="American">American</option>                        
+                        <option value="Mexican">Mexican</option>
+                        <option value="Asian">Asian</option>
+                        <option value="Mediterranean">Mediterranean</option>
+                        <option value="Vegetarian">Vegetarian</option>
+                        <option value="Vegan">Vegan</option>
+                    </select>
+                        <label for="recipe_cuisine">Cuisine</label>
                 </div>
             </div>
             <!--Recipe Type Selector-->
@@ -25,53 +47,23 @@
                         <option value="Lunch">Lunch</option>
                         <option value="Dinner">Dinner</option>
                         <option value="Snack">Snack</option>
-                        <option value="Dessert">Dessert</option>
-                        <option value="Bread">Bread</option>
+                        <option value="Pastry">Pastry</option>
+                        <option value="Baking">Baking</option>
                         <option value="Smoothie">Smoothie</option>
                         <option value="Juice">Juice</option>
                     </select>
                         <label for="recipe_type">Type</label>
                 </div>
             </div>
-            <!--Cuisine Selector-->
+            <!--Recipe Time Duration Selector-->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-globe-europe prefix green-text"></i>
-                    <select id="recipe_cuisine" name="recipe_cuisine" class="validate" required>
-                        <option value="" disabled selected>Choose Your Cuisine</option>
-                        <option value="Italian">Italian</option>
-                        <option value="French">French</option>
-                        <option value="Spanish">Spanish</option>
-                        <option value="Irish">Irish</option>
-                        <option value="English">English</option>
-                        <option value="Mexican">Mexican</option>
-                        <option value="Indian">Indian</option>
-                        <option value="Japanese">Japanese</option>
-                        <option value="Chinese">Chinese</option>
-                        <option value="Thai">Thai</option>
-                        <option value="Greek">Greek</option>
-                        <option value="American">American</option>
-                        <option value="Mediterranean">Mediterranean</option>
-                        <option value="Vegetarian">Vegetarian</option>
-                        <option value="Vegan">Vegan</option>
-                        <option value="Mediterranean">Mediterranean</option>
-                        <option value="Global">Global</option>
-                        <option value="Allergen Friendly">Allergen Friendly</option>
-                    </select>
-                        <label for="recipe_cuisine">Cuisine</label>
-                </div>
-            </div>
-            <!--Recipe Time Selector-->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-clock prefix green-text"></i>
+                    <i class="fas fa-stopwatch prefix green-text"></i>
                      <select id="recipe_time" name="recipe_time" class="validate" required>
                         <option value="" disabled selected>Time Duration</option>
                         <option value="15 minutes">Less Than 15 Minutes</option>
                         <option value="30 minutes">Less Than 30 Minutes</option>
-                        <option value="45 minutes">Less Than 45 Minutes</option>
                         <option value="1 hour">Less Than 1 Hour</option>
-                        <option value="1 hour 30 minutes">Less Than 1 Hour 30 Minutes</option>
                         <option value="2 hours">Less Than 2 Hours</option>
                         <option value="3 hours">Less Than 3 Hours</option>
                         <option value="4 hours">Less Than 4 Hours</option>
@@ -82,12 +74,61 @@
                         <label for="recipe_time">Time</label>
                 </div>
             </div>
+            <!--Recipe Serving-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-utensil-spoon prefix green-text"></i>
+                     <select id="recipe_serving" name="recipe_serving" class="validate" required>
+                        <option value="" disabled selected>Serves</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                        <option value="4">Four</option>
+                        <option value="5">Five</option>
+                        <option value="6">Six</option>
+                    </select>
+                        <label for="recipe_serving">Serves</label>
+                </div>
+            </div>
+            <!--Allergyn Selection-->
+            <div class="row">
+                <div class="input-field col s12">
+                <i class="fas fa-bacterium prefix green-text"></i>
+                <select multiple id="recipe_allergies" name="recipe_allergies" class="validate" required>
+                    <option value="" disabled selected>Choose Your Allergens</option>
+                    <option value="none">None</option>
+                    <option value="gluten">Gluten</option>
+                    <option value="crustaceans">Crustaceans</option>
+                    <option value="eggs">Eggs</option>
+                    <option value="fish">Fish</option>
+                    <option value="peanuts">Peanuts</option>
+                    <option value="soybeans">Soybeans</option>
+                    <option value="milk">Milk</option>
+                    <option value="nuts">Nuts</option>
+                    <option value="celery">Celery</option>
+                    <option value="mustard">Mustard</option>
+                    <option value="sesame">Sesame Seeds</option>
+                    <option value="sulphur">Sulphur Dioxide and Sulphite</option>
+                    <option value="lupin">Lupin</option>
+                    <option value="molluscs">Molluscs</option>
+                </select>
+                <label for="recipe_allergies">Allergens</label>
+                </div>
+            </div>
             <!--Recipe Ingredients-->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-cheese prefix green-text"></i>
+                    <i class="fas fa-apple-alt prefix green-text"></i>
                     <textarea id="recipe_ingredients" name="recipe_ingredients" class="materialize-textarea" required></textarea>
                     <label for="recipe_ingredients">Ingredients</label>
+                </div>
+            </div>
+            <!--Recipe Equiptment-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-utensils prefix green-text"></i>
+                    <textarea id="recipe_equiptment" name="recipe_equiptment" class="materialize-textarea" required></textarea>
+                    <label for="recipe_equiptment">Equiptment</label>
                 </div>
             </div>
             <!--Recipe Method-->
@@ -96,6 +137,14 @@
                     <i class="fas fa-angle-double-down prefix green-text"></i>
                     <textarea id="recipe_method" name="recipe_method" class="materialize-textarea" required></textarea>
                     <label for="recipe_method">Method</label>
+                </div>
+            </div>
+            <!--Recipe Notes-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-sticky-note prefix green-text"></i>
+                    <textarea id="recipe_notes" name="recipe_notes" class="materialize-textarea"></textarea>
+                    <label for="recipe_notes">Notes</label>
                 </div>
             </div>
             <!--Submit Button-->
