@@ -11,7 +11,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-apple-alt prefix green-text"></i>
                     <input id="recipe_name" name="recipe_name" minlength="2" maxlength="75"
-                     type="text" class="validate" required>
+                     value="{{ recipe.recipe_name }}" type="text" class="validate" required>
                     <label for="recipe_name">Recipe</label>
                 </div>
             </div>
@@ -86,7 +86,9 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-cheese prefix green-text"></i>
-                    <textarea id="recipe_ingredients" name="recipe_ingredients" class="materialize-textarea" required></textarea>
+                    <textarea id="recipe_ingredients" name="recipe_ingredients" class="materialize-textarea" required>
+                        {{- recipe.recipe_ingredients -}}
+                    </textarea>
                     <label for="recipe_ingredients">Ingredients</label>
                 </div>
             </div>
@@ -94,13 +96,19 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-angle-double-down prefix green-text"></i>
-                    <textarea id="recipe_method" name="recipe_method" class="materialize-textarea" required></textarea>
+                    <textarea id="recipe_method" name="recipe_method" class="materialize-textarea" required>
+                        {{- recipe.recipe_method -}}
+                    </textarea>
                     <label for="recipe_method">Method</label>
                 </div>
             </div>
             <!--Submit Button-->
             <div class="row">
                 <div class="col s12 center-align">
+                    <!--Cancel Button-->
+                    <a href="{{ url_for('get_recipes') }}" class="btn-large red text-shadow">
+                        Cancel Changes <i class="fas fa-times-circle right"></i>
+                    </a>
                     <button type="submit" class="btn-large green text-shadow">
                         Edit Recipe <i class="fas fa-edit right"></i>
                     </button>
