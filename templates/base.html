@@ -27,7 +27,7 @@
                 {% if session.user|lower == "admin"|lower %}
                     <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
                 {% endif %}
-                <li><a href="#">Shop</a></li>
+                <li><a href="#">Resources</a></li>
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
                 <li><a href="{{ url_for('login') }}">Log In</a></li>
@@ -47,7 +47,7 @@
                 {% if session.user|lower == "admin"|lower %}
                     <li><a href="{{ url_for('get_categories') }}" class="green-text">Manage Categories</a></li>
                 {% endif %}
-                <li><a href="#" class="green-text">Shop</a></li>
+                <li><a href="#" class="green-text">Resources</a></li>
                 <li><a href="{{ url_for('logout') }}" class="green-text">Log Out</a></li>
             {% else %}
                 <li><a href="{{ url_for('login') }}" class="green-text">Log In</a></li>
