@@ -11,20 +11,15 @@
         </div>
     </div>
 
-    <ul class="collapsible">
-        {% for recipe in recipes %}
-        <li>
-            <div class="collapsible-header white-text green text-shadow">
-                <i class="fas fa-caret-down"></i>
-                <strong>{{ recipe.recipe_name }}, {{ recipe.recipe_cuisine }}, {{ recipe.recipe_time }}</strong>
-            </div>
-            <div class="collapsible-body">
-                <strong>{{ recipe.category_name }}</strong>
-                <p>Ingredients : {{ recipe.recipe_ingredients }}</p>
-                <p>Method : {{ recipe.recipe_method }}</p>
-            </div>
-        </li>
-        {% endfor %}
-    </ul>
+    <div>
+         <p>
+             Here are all your saved recipes. <br>
+             Create, edit or delete them.
+         </p>
+     </div>
+
+     <div class="image">
+            <img class="materialboxed" width="650" src="assets/images/recipe_cluster_add_recipe_image.jpg">
+     </div>
 
 {% endblock %}

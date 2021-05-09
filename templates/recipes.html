@@ -3,6 +3,20 @@
 
      <h3 class="green-text center-align">All Recipes</h3>
 
+     <div>
+         <p>
+             Welcome to Recipe Cluster, store your favorite recipes and expolore others.
+             Search recipes based on Cuisine, Ingredients and type of meal.
+             Adding your recipes has never been so easy, may you never forget that tasty dish again!<br>
+
+             <strong>Login</strong> to your account, or join us to start creating and sharing those delicious meals!
+         </p>
+     </div>
+
+     <div class="image">
+            <img class="materialboxed" width="650" src="assets/images/recipe_cluster_home_image.jfif">
+     </div>
+
      <div class="row card-panel grey lighten-5">
          <form action="{{ url_for('search') }}" method="post" class="col s12">
               <div class="row valign-wrapper center-align">
@@ -29,8 +43,8 @@
                 <div class="col s3">
                     <i class="fas fa-caret-down"></i>
                     {% if session.user|lower == recipe.created_by|lower %}
-                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small white green-text">Delete</a>
-                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small white green-text">Edit</a>
+                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small white black-text">Delete</a>
+                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small white black-text">Edit</a>
                     {% endif %}
                 </div>
                 <div class="col s9">

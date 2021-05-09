@@ -201,6 +201,11 @@ def delete_category(category_id):
     return redirect(url_for("get_categories"))
 
 
+@app.route("/resources")
+def resources():
+    return render_template(url_for("resources.html"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
