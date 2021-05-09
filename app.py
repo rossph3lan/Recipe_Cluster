@@ -203,7 +203,7 @@ def delete_category(category_id):
 
 @app.route("/resources")
 def resources():
-    return render_template(url_for("resources.html"))
+    return render_template("resources.html")
 
 
 if __name__ == "__main__":

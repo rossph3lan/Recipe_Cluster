@@ -5,7 +5,10 @@ body{
 }
 
 p{
-    color: green;
+    text-align: center;
+}
+
+.resources{
     text-align: center;
 }
 
