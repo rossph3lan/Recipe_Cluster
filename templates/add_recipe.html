@@ -10,7 +10,7 @@
      </div>
 
      <div class="image">
-            <img class="materialboxed" width="650" src="assets/images/recipe_cluster_home_image.jfif">
+            <img class="materialboxed" width="755" src={{ url_for('static', filename='images/recipe_cluster_add_recipe_image.jpg')}}>
      </div>
 
     <!--Recipe Form-->
@@ -20,8 +20,8 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-file-signature prefix green-text"></i>
-                    <input id="recipe_name" name="recipe_name" minlength="2" maxlength="75"
-                     type="text" class="validate" required>
+                    <textarea id="recipe_name" name="recipe_name" minlength="2" maxlength="75"
+                     type="text" class="materialize-textarea" required></textarea>
                     <label for="recipe_name">Name</label>
                 </div>
             </div>
@@ -30,7 +30,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-globe-europe prefix green-text"></i>
                     <select id="recipe_cuisine" name="recipe_cuisine" class="validate" required>
-                        <option value="" disabled selected>Choose Your Cuisine</option>
+                        <option value=""></option>
                         <option value="Global">Global</option>
                         <option value="Irish">Irish</option>
                         <option value="English">English</option>
@@ -52,7 +52,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-clock prefix green-text"></i>
                      <select id="recipe_type" name="recipe_type" class="validate" required>
-                        <option value="" disabled selected>Type Of Meal</option>
+                        <option value=""></option>
                         <option value="Breakfast">Breakfast</option>
                         <option value="Lunch">Lunch</option>
                         <option value="Dinner">Dinner</option>
@@ -70,15 +70,15 @@
                 <div class="input-field col s12">
                     <i class="fas fa-stopwatch prefix green-text"></i>
                      <select id="recipe_time" name="recipe_time" class="validate" required>
-                        <option value="" disabled selected>Time Duration</option>
-                        <option value="15 Minutes">Less Than 15 Minutes</option>
-                        <option value="30 Minutes">Less Than 30 Minutes</option>
-                        <option value="1 Hour">Less Than 1 Hour</option>
-                        <option value="2 Hours">Less Than 2 Hours</option>
-                        <option value="3 Hours">Less Than 3 Hours</option>
-                        <option value="4 Hours">Less Than 4 Hours</option>
-                        <option value="5 Hours">Less Than 5 Hours</option>
-                        <option value="6 Hours">Less Than 6 Hours</option>
+                        <option value=""></option>
+                        <option value="Less Than 15 Minutes">Less Than 15 Minutes</option>
+                        <option value="Less Than 30 Minutes">Less Than 30 Minutes</option>
+                        <option value="Less Than 1 Hour">Less Than 1 Hour</option>
+                        <option value="Less Than 2 Hours">Less Than 2 Hours</option>
+                        <option value="Less Than 3 Hours">Less Than 3 Hours</option>
+                        <option value="Less Than 4 Hours">Less Than 4 Hours</option>
+                        <option value="Less Than 5 Hours">Less Than 5 Hours</option>
+                        <option value="Less Than 6 Hours">Less Than 6 Hours</option>
                         <option value="Overnight">Over Night</option>
                     </select>
                         <label for="recipe_time">Time</label>
@@ -89,13 +89,13 @@
                 <div class="input-field col s12">
                     <i class="fas fa-utensil-spoon prefix green-text"></i>
                      <select id="recipe_serving" name="recipe_serving" class="validate" required>
-                        <option value="" disabled selected>Serves</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                        <option value="4">Four</option>
-                        <option value="5">Five</option>
-                        <option value="6">Six</option>
+                        <option value=""></option>
+                        <option value="One">One</option>
+                        <option value="Two">Two</option>
+                        <option value="Three">Three</option>
+                        <option value="Four">Four</option>
+                        <option value="Five">Five</option>
+                        <option value="Six">Six</option>
                     </select>
                         <label for="recipe_serving">Serves</label>
                 </div>
@@ -105,7 +105,6 @@
                 <div class="input-field col s12">
                 <i class="fas fa-bacterium prefix green-text"></i>
                 <select multiple id="recipe_allergies" name="recipe_allergies" class="validate" required>
-                    <option value="" disabled selected>Choose Your Allergens</option>
                     <option value="None">None</option>
                     <option value="Gluten">Gluten</option>
                     <option value="Crustaceans">Crustaceans</option>
@@ -116,8 +115,8 @@
                     <option value="Milk">Milk</option>
                     <option value="Nuts">Nuts</option>
                     <option value="Celery">Celery</option>
-                    <option value="mustard">Mustard</option>
-                    <option value="Sesame">Sesame Seeds</option>
+                    <option value="Mustard">Mustard</option>
+                    <option value="Sesame">Sesame</option>
                     <option value="Sulphur">Sulphur Dioxide and Sulphite</option>
                     <option value="Lupin">Lupin</option>
                     <option value="Molluscs">Molluscs</option>
@@ -133,12 +132,12 @@
                     <label for="recipe_ingredients">Ingredients</label>
                 </div>
             </div>
-            <!--Recipe Equiptment-->
+            <!--Recipe Equipment-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-utensils prefix green-text"></i>
-                    <textarea id="recipe_equiptment" name="recipe_equiptment" class="materialize-textarea" required></textarea>
-                    <label for="recipe_equiptment">Equiptment</label>
+                    <textarea id="recipe_equipment" name="recipe_equipment" class="materialize-textarea" required></textarea>
+                    <label for="recipe_equipment">Equipment</label>
                 </div>
             </div>
             <!--Recipe Method-->

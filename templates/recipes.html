@@ -5,7 +5,7 @@
 
      <div>
          <p>
-             Welcome to Recipe Cluster, store your favorite recipes and expolore others.
+             Welcome to Recipe Cluster, store your favorite recipes and explore others.
              Search recipes based on Cuisine, Ingredients and type of meal.
              Adding your recipes has never been so easy, may you never forget that tasty dish again!
 
@@ -13,7 +13,7 @@
          </p>
      </div>
 
-     <img class="materialboxed" width="650" src={{  url_for('static', filename='static/images/recipe_cluster_home_image.jfif')}}>
+     <img class="materialboxed" width="755" src={{ url_for('static', filename='images/recipe_cluster_home_image.jfif')}}>
 
      <div class="row card-panel grey lighten-5">
          <form action="{{ url_for('search') }}" method="post" class="col s12">
@@ -56,7 +56,7 @@
                 <p><strong>Serves</strong> : {{ recipe.recipe_serving }}</p>
                 <p><strong>Allergens</strong> : {{ recipe.recipe_allergies }}</p>
                 <p><strong>Ingredients</strong> : {{ recipe.recipe_ingredients }}</p>
-                <p><strong>Equiptment</strong> : {{ recipe.recipe_equiptment }}</p>
+                <p><strong>Equipment</strong> : {{ recipe.recipe_equipment }}</p>
                 <p><strong>Method</strong> : {{ recipe.recipe_method }}</p>
                 <p><strong>Notes</strong> : {{ recipe.recipe_notes }}</p>
                 <p><em>By : {{ recipe.created_by }}</em></p>
