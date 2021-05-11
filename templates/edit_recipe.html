@@ -1,11 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <!--Page Header-->
     <h3 class="green-text center-align">Edit Recipe</h3>
-
+     
+    <!--Page Image-->
     <div class="image">
-            <img class="materialboxed" width="755" src={{ url_for('static', filename='images/recipe_cluster_edit_recipe_image.jpg')}}>
-     </div>
+        <img class="responsive" width="800" src={{ url_for('static', filename='images/recipe_cluster_edit_recipe_image.jpg')}} alt="Afternoon Tea">
+    </div>
+
+    <!--Page Paragraph-->
+    <div class="page_paragraph">
+        <p>Edit your recipe here.</p>  
+    </div>
 
     <!--Recipe Form-->
     <div class="row card-panel grey lighten-5">
@@ -15,7 +22,9 @@
                 <div class="input-field col s12">
                     <i class="fas fa-file-signature prefix green-text"></i>
                     <textarea id="recipe_name" name="recipe_name" minlength="2" maxlength="75"
-                     value="{{ recipe.recipe_name }}" type="text" class="materialize-textarea" required></textarea>
+                     value="{{ recipe.recipe_name }}" type="text" class="materialize-textarea" required>
+                     {{- recipe.recipe_name -}}
+                    </textarea>
                     <label for="recipe_name">Recipe</label>
                 </div>
             </div>
@@ -48,13 +57,16 @@
                      <select id="recipe_type" name="recipe_type" class="validate" required>
                         <option value=""></option>
                         <option value="Breakfast" {%if recipe.recipe_type=="Breakfast"%} selected {% endif %}>Breakfast</option>
-                        <option value="Breakfast" {%if recipe.recipe_type=="Lunch"%} selected {% endif %}>Lunch</option>
-                        <option value="Breakfast" {%if recipe.recipe_type=="Dinner"%} selected {% endif %}>Dinner</option>
-                        <option value="Breakfast" {%if recipe.recipe_type=="Snack"%} selected {% endif %}>Snack</option>
-                        <option value="Breakfast" {%if recipe.recipe_type=="Pastry"%} selected {% endif %}>Pastry</option>
-                        <option value="Breakfast" {%if recipe.recipe_type=="Baking"%} selected {% endif %}>Baking</option>
-                        <option value="Breakfast" {%if recipe.recipe_type=="Smoothie"%} selected {% endif %}>Smoothie</option>
-                        <option value="Breakfast" {%if recipe.recipe_type=="Juice"%} selected {% endif %}>Juice</option>
+                        <option value="Lunch" {%if recipe.recipe_type=="Lunch"%} selected {% endif %}>Lunch</option>
+                        <option value="Dinner" {%if recipe.recipe_type=="Dinner"%} selected {% endif %}>Dinner</option>
+                        <option value="Snacks" {%if recipe.recipe_type=="Snack"%} selected {% endif %}>Snack</option>
+                        <option value="Pastry" {%if recipe.recipe_type=="Pastry"%} selected {% endif %}>Pastry</option>
+                        <option value="Baking" {%if recipe.recipe_type=="Baking"%} selected {% endif %}>Baking</option>
+                        <option value="Smoothie" {%if recipe.recipe_type=="Smoothie"%} selected {% endif %}>Smoothie</option>
+                        <option value="Juice" {%if recipe.recipe_type=="Juice"%} selected {% endif %}>Juice</option>
+                        <option value="Tea/Coffee" {%if recipe.recipe_type=="Tea/Coffee"%} selected {% endif %}>Tea/Coffee</option>
+                        <option value="Beverage" {%if recipe.recipe_type=="Beverage"%} selected {% endif %}>Beverage</option>
+                        <option value="Alcohol" {%if recipe.recipe_type=="Alcohol"%} selected {% endif %}>Alcohol</option>
                     </select>
                         <label for="recipe_type">Type</label>
                 </div>
@@ -63,7 +75,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-stopwatch prefix green-text"></i>
-                     <select id="recipe_time" name="recipe_time" class="validate" required>
+                     <select id="recipe_time" name="recipe_time" class="validate">
                         <option value=""></option>
                         <option value="Less Than 15 Minutes" {%if recipe.recipe_time=="Less Than 15 Minutes"%} selected {% endif %}>Less Than 15 Minutes</option>
                         <option value="Less Than 30 Minutes" {%if recipe.recipe_time=="Less Than 30 Minutes"%} selected {% endif %}>Less Than 30 Minutes</option>
@@ -82,7 +94,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-utensil-spoon prefix green-text"></i>
-                     <select id="recipe_serving" name="recipe_serving" class="validate" required>
+                     <select id="recipe_serving" name="recipe_serving" class="validate">
                         <option value=""></option>
                         <option value="One" {% if recipe.recipe_serving=="One"%} selected {% endif %}>One</option>
                         <option value="Two" {% if recipe.recipe_serving=="Two"%} selected {% endif %}>Two</option>
@@ -98,24 +110,24 @@
             <div class="row">
                 <div class="input-field col s12">
                 <i class="fas fa-bacterium prefix green-text"></i>
-                <select multiple id="recipe_allergies" name="recipe_allergies" class="validate" required>
-                    <option value="None" {% if recipe.recipe_allergies=="None"%} selected {% endif %}>None</option>
-                    <option value="Gluten" {% if recipe.recipe_allergies=="Gluten"%} selected {% endif %}>Gluten</option>
+                <select multiple id="recipe_allergens" name="recipe_allergens" class="validate">
+                    <option value="" {% if recipe.recipe_allergens==""%} selected {% endif %}></option>
+                    <option value="Gluten" {% if recipe.recipe_allergens=="Gluten"%} selected {% endif %}>Gluten</option>
                     <option value="Crustaceans" {% if recipe.recipe_allergies=="Crustaceans"%} selected {% endif %}>Crustaceans</option>
-                    <option value="Eggs" {% if recipe.recipe_allergies=="Eggs"%} selected {% endif %}>Eggs</option>
-                    <option value="Fish" {% if recipe.recipe_allergies=="Fish"%} selected {% endif %}>Fish</option>
-                    <option value="Peanuts" {% if recipe.recipe_allergies=="Peanuts"%} selected {% endif %}>Peanuts</option>
-                    <option value="Soybeans" {% if recipe.recipe_allergies=="Soybeans"%} selected {% endif %}>Soybeans</option>
-                    <option value="Milk" {% if recipe.recipe_allergies=="Milk"%} selected {% endif %}>Milk</option>
-                    <option value="Nuts" {% if recipe.recipe_allergies=="Nuts"%} selected {% endif %}>Nuts</option>
-                    <option value="Celery" {% if recipe.recipe_allergies=="Celery"%} selected {% endif %}>Celery</option>
-                    <option value="Mustard" {% if recipe.recipe_allergies=="Mustard"%} selected {% endif %}>Mustard</option>
-                    <option value="Sesame" {% if recipe.recipe_allergies=="Sesame"%} selected {% endif %}>Sesame</option>
-                    <option value="Sulphur Dioxide and Sulphite" {% if recipe.recipe_allergies=="Sulphur Dioxide and Sulphite"%} selected {% endif %}>Sulphur Dioxide and Sulphite</option>
-                    <option value="Lupin" {% if recipe.recipe_allergies=="Lupin"%} selected {% endif %}>Lupin</option>
-                    <option value="Molluscs" {% if recipe.recipe_allergies=="Molluscs"%} selected {% endif %}>Molluscs</option>
+                    <option value="Eggs" {% if recipe.recipe_allergens=="Eggs"%} selected {% endif %}>Eggs</option>
+                    <option value="Fish" {% if recipe.recipe_allergens=="Fish"%} selected {% endif %}>Fish</option>
+                    <option value="Peanuts" {% if recipe.recipe_allergens=="Peanuts"%} selected {% endif %}>Peanuts</option>
+                    <option value="Soybeans" {% if recipe.recipe_allergens=="Soybeans"%} selected {% endif %}>Soybeans</option>
+                    <option value="Milk" {% if recipe.recipe_allergens=="Milk"%} selected {% endif %}>Milk</option>
+                    <option value="Nuts" {% if recipe.recipe_allergens=="Nuts"%} selected {% endif %}>Nuts</option>
+                    <option value="Celery" {% if recipe.recipe_allergens=="Celery"%} selected {% endif %}>Celery</option>
+                    <option value="Mustard" {% if recipe.recipe_allergens=="Mustard"%} selected {% endif %}>Mustard</option>
+                    <option value="Sesame" {% if recipe.recipe_allergens=="Sesame"%} selected {% endif %}>Sesame</option>
+                    <option value="Sulphur Dioxide and Sulphite" {% if recipe.recipe_allergens=="Sulphur Dioxide and Sulphite"%} selected {% endif %}>Sulphur Dioxide and Sulphite</option>
+                    <option value="Lupin" {% if recipe.recipe_allergens=="Lupin"%} selected {% endif %}>Lupin</option>
+                    <option value="Molluscs" {% if recipe.recipe_allergens=="Molluscs"%} selected {% endif %}>Molluscs</option>
                 </select>
-                <label for="recipe_allergies">Allergens</label>
+                <label for="recipe_allergens">Allergens</label>
                 </div>
             </div>
             <!--Recipe Ingredients-->
@@ -132,7 +144,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-utensils prefix green-text"></i>
-                    <textarea id="recipe_equipment" name="recipe_equipment" class="materialize-textarea" required>
+                    <textarea id="recipe_equipment" name="recipe_equipment" class="materialize-textarea">
                         {{- recipe.recipe_equipment -}}
                     </textarea>
                     <label for="recipe_equipment">Equipment</label>
@@ -142,13 +154,13 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-angle-double-down prefix green-text"></i>
-                    <textarea id="recipe_method" name="recipe_method" class="materialize-textarea" required>
+                    <textarea id="recipe_method" name="recipe_method" class="materialize-textarea">
                         {{- recipe.recipe_method -}}
                     </textarea>
                     <label for="recipe_method">Method</label>
                 </div>
             </div>
-                        <!--Recipe Notes-->
+            <!--Recipe Notes-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-sticky-note prefix green-text"></i>

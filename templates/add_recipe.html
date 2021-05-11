@@ -1,17 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <!--Page Header-->
     <h3 class="green-text center-align">Add Recipe</h3>
 
-         <div>
-         <p>
-             Add your recipe below. Our form has multipal options for you to fill in to provide ingformation about your recipes.
-         </p>
-     </div>
+     <!--Page Image-->
+    <div class="image">
+        <img class="responsive" width="800" src={{ url_for('static', filename='images/recipe_cluster_add_recipe_image.jpg')}} alt="Fruit & Vegtables">
+    </div>
 
-     <div class="image">
-            <img class="materialboxed" width="755" src={{ url_for('static', filename='images/recipe_cluster_add_recipe_image.jpg')}}>
-     </div>
+    <!--Page Paragraph-->
+    <div class="page_paragraph">
+        <p>
+             Add your recipe below. Our form has multiple options for you to fill in to provide information about your recipes.
+        </p>
+    </div>
 
     <!--Recipe Form-->
     <div class="row card-panel grey lighten-5">
@@ -61,6 +64,9 @@
                         <option value="Baking">Baking</option>
                         <option value="Smoothie">Smoothie</option>
                         <option value="Juice">Juice</option>
+                        <option value="Tea/Coffee">Tea/Coffee</option>
+                        <option value="Beverage">Beverage</option>
+                        <option value="Alcohol">Alcohol</option>
                     </select>
                         <label for="recipe_type">Type</label>
                 </div>
@@ -69,7 +75,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-stopwatch prefix green-text"></i>
-                     <select id="recipe_time" name="recipe_time" class="validate" required>
+                     <select id="recipe_time" name="recipe_time" class="validate">
                         <option value=""></option>
                         <option value="Less Than 15 Minutes">Less Than 15 Minutes</option>
                         <option value="Less Than 30 Minutes">Less Than 30 Minutes</option>
@@ -79,7 +85,7 @@
                         <option value="Less Than 4 Hours">Less Than 4 Hours</option>
                         <option value="Less Than 5 Hours">Less Than 5 Hours</option>
                         <option value="Less Than 6 Hours">Less Than 6 Hours</option>
-                        <option value="Overnight">Over Night</option>
+                        <option value="Overnight">Overnight</option>
                     </select>
                         <label for="recipe_time">Time</label>
                 </div>
@@ -88,7 +94,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-utensil-spoon prefix green-text"></i>
-                     <select id="recipe_serving" name="recipe_serving" class="validate" required>
+                     <select id="recipe_serving" name="recipe_serving" class="validate">
                         <option value=""></option>
                         <option value="One">One</option>
                         <option value="Two">Two</option>
@@ -100,12 +106,12 @@
                         <label for="recipe_serving">Serves</label>
                 </div>
             </div>
-            <!--Allergyn Selection-->
+            <!--Allergen Selection-->
             <div class="row">
                 <div class="input-field col s12">
                 <i class="fas fa-bacterium prefix green-text"></i>
-                <select multiple id="recipe_allergies" name="recipe_allergies" class="validate" required>
-                    <option value="None">None</option>
+                <select multiple id="recipe_allergens" name="recipe_allergens" class="validate">
+                    <option value=""></option>
                     <option value="Gluten">Gluten</option>
                     <option value="Crustaceans">Crustaceans</option>
                     <option value="Eggs">Eggs</option>
@@ -121,7 +127,7 @@
                     <option value="Lupin">Lupin</option>
                     <option value="Molluscs">Molluscs</option>
                 </select>
-                <label for="recipe_allergies">Allergens</label>
+                <label for="recipe_allergens">Allergens</label>
                 </div>
             </div>
             <!--Recipe Ingredients-->
@@ -136,7 +142,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-utensils prefix green-text"></i>
-                    <textarea id="recipe_equipment" name="recipe_equipment" class="materialize-textarea" required></textarea>
+                    <textarea id="recipe_equipment" name="recipe_equipment" class="materialize-textarea"></textarea>
                     <label for="recipe_equipment">Equipment</label>
                 </div>
             </div>
@@ -144,7 +150,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-angle-double-down prefix green-text"></i>
-                    <textarea id="recipe_method" name="recipe_method" class="materialize-textarea" required></textarea>
+                    <textarea id="recipe_method" name="recipe_method" class="materialize-textarea"></textarea>
                     <label for="recipe_method">Method</label>
                 </div>
             </div>

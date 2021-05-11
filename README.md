@@ -1,45 +1,82 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Recipe Cluster
+Recipe Cluster is designed for gastronomy lovers. Save your favourite food and drink recipes.
+Easily navigate through the application, adding, editing and deleting recipes as you wish.
+Our forms are designed so you will be able to custom save your recipes and grab every last detail !
+Search though other users recipes for inspiration. Our aim is to keep your recipes all in one place so you can foucus on cooking up a storm!
 
-Welcome SmokeySam,
+## UX/UI  
+### Planes Of Scope
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+1. Stratagy Plane
+* I Focused on what the user usually questioned when asking about a recipe and the main inforation included in the average recpie and that the application would cater for their needs and wants. 
 
-## Gitpod Reminders
+2. Scope Plane
+* I thought of the features and usuabilty of the applcation and how it would help the user in creating and storing their recipes.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+3. Structure Plane
+* At this stage of the porject after going through the features I wanted on the application, I started designing the structure of the applcation and what pages it would need.
 
-`python3 -m http.server`
+4. Skeleton Plane
+* After selecting the pages and designing the flow of the application, I started visualizing the layout, buttons, colors and fonts that would appeal to the user.
 
-A blue button should appear to click: _Make Public_,
+5. Surface Plane
+* Bringing all the other stages together I started building the project and adjusting to changes and new implements on the way.
 
-Another blue button should appear to click: _Open Browser_.
+### User Stories
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* As A User Of Recipe Cluster
+1. I would like somewhere to store my recipes.
+2. I would like the application to be easy to use.
+3. I would like multiple fields to add different information about my recipe.
+4. I would like to be able to search recipes.
+5. I would like to be able to update and delete my recipes.
 
-A blue button should appear to click: _Make Public_,
+* As A Developer Of Recipe Cluster
+1. Implementing the CRUD functionality.
+2. Learning to use MONGDB.
+3. Ensuring my application is user friendly.
+4. Giving the user multiple parameter to add about each recipe.
+5. Letting the user access their stored data easily.
 
-Another blue button should appear to click: _Open Browser_.
+### Features
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+1. Navbar
 
-## Updates Since The Instructional Video
+* The Navbar is made up of 5 Links : Clickable Logo, All Recipes, My Recipes, Add Recipes, Resources.
+When logged in "Log Out" is displayed in the Navbar. When not logged in we have a "Sign up" and "Log In" links also
+displayed in the Navbvar. I chose green for the color of the Navbar as it is the colour symolized with health and also most fresh produce "Eat your greens".
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+* I also added a Mobile Navabr for use on other divices.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+2. Images
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+* I used images with alot of colour to entise the user. The images show different types of meals and alot of fresh ingredients.
+I thought these images fitted my idea and what I was trying to bulid. They may also inspire the user to use fresher produce.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+3. Recipe Forms
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+4. Search Box
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+5. Collapsible Recipe List
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+6. Resources Page
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+7. Sign Up, Login, Logout
 
----
+### Design 
 
-Happy coding!
+1. Fonts & Color
+
+* I imported "Itim" from Google Fonts to use as my primary font and have "sans-serif" as my backup.
+I liked the simplicitly in the sytling. It is also reasy to read.
+
+* For my headers on the pages i picked green as the colour again to match with my Navbar.
+
+* Paragraphs are in black color. I feel black is such a neautral colour and people are accustomed to seeing it.
+Also its very easy to read.
+
+2. Icons
+
+3. Structure
+
+

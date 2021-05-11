@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/recipes")
 def get_recipes():
-    recipes = list(mongo.db.recipes.find())
+    recipes = list(mongo.db.recipes.find()) 
     return render_template("recipes.html", recipes=recipes)
 
 
@@ -88,12 +88,13 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    recipes = list(mongo.db.recipes.find({'created_by': session['user']}))
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template("profile.html", username=username, recipes=recipes)
 
     return redirect(url_for("login"))
 
@@ -115,7 +116,7 @@ def add_recipe():
                 "recipe_type": request.form.get("recipe_type"),
                 "recipe_time": request.form.get("recipe_time"),
                 "recipe_serving": request.form.get("recipe_serving"),
-                "recipe_allergies": request.form.get("recipe_allergies"),
+                "recipe_allergens": request.form.get("recipe_allergens"),
                 "recipe_ingredients": request.form.get("recipe_ingredients"),
                 "recipe_equipment": request.form.get("recipe_equipment"),
                 "recipe_method": request.form.get("recipe_method"),
@@ -124,7 +125,7 @@ def add_recipe():
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Successfully Added")
-        return redirect(url_for("get_recipes"))
+        return redirect(url_for("profile", username=session["user"]))
     else:
         categories = mongo.db.categories.find().sort("category_name", 1)
         return render_template("add_recipe.html", categories=categories)
@@ -139,15 +140,16 @@ def edit_recipe(recipe_id):
                 "recipe_type": request.form.get("recipe_type"),
                 "recipe_time": request.form.get("recipe_time"),
                 "recipe_serving": request.form.get("recipe_serving"),
-                "recipe_allergies": request.form.get("recipe_allergies"),
+                "recipe_allergens": request.form.get("recipe_allergens"),
                 "recipe_ingredients": request.form.get("recipe_ingredients"),
-                "recipe_equiptment": request.form.get("recipe_equiptment"),
+                "recipe_equipment": request.form.get("recipe_equipment"),
                 "recipe_method": request.form.get("recipe_method"),
                 "recipe_notes": request.form.get("recipe_notes"),
                 "created_by": session["user"]
         }  
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe Successfully Updated")
+        return redirect(url_for("profile", username=session["user"]))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)

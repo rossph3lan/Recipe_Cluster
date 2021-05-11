@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <!--Page Header-->
     <h3 class="center-align green-text">Sign Up</h3>
 
     <div class="row">
@@ -12,7 +13,7 @@
                          <i class="fas fa-id-badge prefix green-text"></i>
                          <input id="username" name="username" type="text" minlength="5"
                          maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-                         <label for="username">Username</label>
+                         <label for="username">Username (Must be more than 5 Characters)</label>
                     </div>
                 </div>
                 <!--Password-->
@@ -34,6 +35,7 @@
         </form>
     </div>
 
+    <!--Link To Login Page-->
     <div class="row">
         <div class="col s12">
             <p class="center-align">
