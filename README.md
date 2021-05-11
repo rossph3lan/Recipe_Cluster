@@ -101,7 +101,7 @@ My pages with user content consist of a header followed by an image. Below the i
 
 ### Wireframes
 
-* Wireframes and Mock ups I made early on are included in a folder within my project called "wireframes".
+* Wireframes and Mock-ups I made early on are included in a folder within my project called "wireframes".
 
 ## Technologies Used
 
@@ -197,7 +197,7 @@ Also, dropdowns were tested to ensure no faults with selection.
       return redirect(url_for("login"))
 
 * I queried my profile view to look for my recipes in MONGODB to add them to my profile page.
-  I added the recipe varible then to my
+  I added the recipe variable then to my
 
       if session["user"]:
 
@@ -233,7 +233,7 @@ I will fix this during further investigation on the matter.
 
 ## Deployment
 
-This project was developed using **Gitpod** , committed to **GitHub** using the build in terminal.
+This project was developed using **Gitpod**, committed to **GitHub** using the build in terminal.
 
 * To deploy the page to **GitHub** :
 
