@@ -54,9 +54,3 @@ p {
     text-align: center;
     font-size: 20px;
 }
-
-@media screen and (max-width: 400px) {
-  button.green.btn.text-shadow {
-    width: 25px;
-  }
-}

@@ -223,6 +223,11 @@ Also dropdowns were vigoursly tested to ensure no faults with selection.
 
 * I applied a ninja if statement to check if nothing was picked to display nothing.
 
+## Unfixed Bugs
+
+1. While testing my mobile resonsivness my buttons are stacking on top of rach other.
+I will fix this during further investigation on the matter.
+
 
 ## Deployment
 
@@ -280,9 +285,6 @@ Such as your : "IP" , "MONGO_DBNAME", "MONGO_URI", "PORT" and "SECRET_KEY".
 7. Select **Manual Deploy** and select **Master Branch**
 
 8. Heroku should now deploy your application.
-
-
-
 
 ## Credits
 
