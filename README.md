@@ -44,13 +44,13 @@ Search though other users recipes for inspiration. Our aim is to keep your recip
 
 * The navbar is made up of 5 Links : Clickable Logo, All Recipes, My Recipes, Add Recipes, Resources.
 When logged in "Log Out" is displayed in the navbar. When not logged in we have a "Sign up" and "Log In" links also
-displayed in the navbvar. I chose green for the colour of the navbar as it is the colour symbolized with health and also most fresh produce "Eat your greens".
+displayed in the navbar. I chose green for the colour of the navbar as it is the colour symbolized with health and also most fresh produce "Eat your greens".
 
 * I also added a mobile navabr for use on other devices.
 
 2. **Images**
 
-* I used images with a lot of colour to entice the user. The images show different types of meals and alot of fresh ingredients.
+* I used images with a lot of colour to entice the user. The images show different types of meals and a lot of fresh ingredients.
 I thought these images fitted my idea and what I was trying to build. They may also inspire the user to use fresher produce.
 
 3. **Recipe Forms**
@@ -64,7 +64,7 @@ Cuisine, Type, Ingredients and more. The form appears on both the "Add Recipe Pa
 
 5. **Collapsible Recipe List**
 
-* The collapsible recipe list shows user the recipes that have been added to the application along with another collapsible recipe list on the users profile page.
+* The collapsible recipe list shows the user the recipes that have been added to the application along with another collapsible recipe list on the users profile page.
 The list on the users page is just the recipes they have created themselves. The collapsible also has a delete and edit button, only available to the user who created them.
 
 6. **Resources Page**
@@ -82,10 +82,10 @@ The list on the users page is just the recipes they have created themselves. The
 * I imported "Itim" from Google Fonts to use as my primary font and have "sans-serif" as my backup.
 I liked the simplicity in the styling. It is also easy to read.
 
-* For my headers on the pages i picked green as the colour again to match with my Navbar.
+* For my headers on the pages I picked green as the colour again to match with my Navbar.
 
 * Paragraphs are in black colour. I feel black is such a neutral colour and people are accustomed to seeing it.
-Its very easy to read.
+It's very easy to read.
 
 * The background colour of my pages is white. As it makes the features of the webpage stand out. Also, it works well for readability with the black text
 of my paragraphs.
@@ -97,11 +97,11 @@ of my paragraphs.
 3. **Structure**
 
 * The overall layout and structure is relatively simple. I focused on the user been able to user the application for its intended purpose. Straight to the point.
-My pages with user content consist of a header followed by an image. Below the image is a short sentence or paragraph explaning what the page does. Below then, the main feature or purpose of the page.
+My pages with user content consist of a header followed by an image. Below the image is a short sentence or paragraph explaining what the page does. Below then, the main feature or purpose of the page.
 
 ### Wireframes
 
-* Wireframes and Mockups I madew early on are included in a folder within my project called "wireframes".
+* Wireframes and Mock ups I made early on are included in a folder within my project called "wireframes".
 
 ## Technologies Used
 
@@ -125,7 +125,7 @@ My pages with user content consist of a header followed by an image. Below the i
 
 4. **Deployment**
 
-* My Project is Deployed both on GitHub & Heroku.
+* My Project is deployed both on GitHub & Heroku.
 
 ## Testing
 
@@ -201,7 +201,7 @@ Also, dropdowns were tested to ensure no faults with selection.
 
       if session["user"]:
 
-3. After adding a recipe or editing a recipe. After submiting it I wanted to be redirected to the users profile page.
+3. After adding a recipe or editing a recipe. After submitting it I wanted to be redirected to the users profile page.
 
 * This is my code before:
 
@@ -278,7 +278,7 @@ This project was developed using **Gitpod** , committed to **GitHub** using the 
 3. Select **Reveal Config Vars**
 
 4. Add your applications **Vars** 
-Such as : "IP" , "MONGO_DBNAME", "MONGO_URI", "PORT" and "SECRET_KEY".
+Such as : "IP", "MONGO_DBNAME", "MONGO_URI", "PORT" and "SECRET_KEY".
 
 5. Go back to **Settings** and click **Deploy**.
 
@@ -296,7 +296,7 @@ I used various resources to find the information I was seeking.
 
 * I read posts on [Stack Overflow](https://stackoverflow.com/), Google and Reddit.
 
-* Watched YouTube videos explaining some **Technologies** i've listed previously.
+* Watched YouTube videos explaining some **Technologies** I've listed previously.
 
 * Followed a series of videos by **The Code Institute** on how to make a CRUD application.
 
