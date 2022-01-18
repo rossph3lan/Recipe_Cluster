@@ -11,16 +11,17 @@
     {% endblock %}
     <title>Recipe Cluster</title>
 </head>
+
 <body>
 
-	<header>
-        
-        <!-- Top Navbar -->
-		<nav class="nav-extended text-shadow green">
-			<div class="nav-wrapper">
-				<a href="{{ url_for('get_recipes') }}" class="brand-logo left">Recipe Cluster</a>
-				<a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-arrow-circle-down"></i></a>
-				<ul class="right hide-on-med-and-down">
+    <!--Header-->
+	<header>      
+    <!-- Top Navbar -->
+        <nav class="nav-extended text-shadow green">
+            <div class="nav-wrapper">
+                <a href="{{ url_for('get_recipes') }}" class="brand-logo left">Recipe Cluster</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-arrow-circle-down"></i></a>
+                <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_recipes') }}">All Recipes</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}">My Recipes</a></li>
@@ -31,12 +32,11 @@
                 <li><a href="{{ url_for('login') }}">Log In</a></li>
                 <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
             {% endif %}
-				</ul>
-			</div>
-		</nav>
-
+                </ul>
+            </div>
+        </nav>
         <!-- Mobile Sidenav -->
-		<ul class="sidenav" id="mobile-demo">
+        <ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align green-text">Recipe Cluster</h4></li>
             <li><a href="{{ url_for('get_recipes') }}" class="green-text">All Recipes</a></li>
             {% if session.user %}
@@ -48,9 +48,10 @@
                 <li><a href="{{ url_for('login') }}" class="green-text">Log In</a></li>
                 <li><a href="{{ url_for('sign_up') }}" class="green-text">Sign Up</a></li>
             {% endif %}
-		</ul>
+        </ul>
     </header>
 
+    <!--Section-->
     <section>
         <!-- Flash Messages -->
         {% with messages = get_flashed_messages() %}
@@ -64,6 +65,7 @@
         {% endwith %}
     </section>
 
+    <!--Main-->
     <main class="container">
         {% block content %}
         {% endblock %}
@@ -76,5 +78,6 @@
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     {% block scripts %}
     {% endblock %}
+
 </body>
 </html>
