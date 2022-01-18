@@ -1,3 +1,4 @@
+# List of packages used in application
 import os
 from flask import (
     Flask, flash, render_template,
@@ -9,12 +10,15 @@ if os.path.exists("env.py"):
     import env
 
 
+# Creating a instance of Flask
 app = Flask(__name__)
 
+# Connecting to MongoDB
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
+# Creating an instance of PyMongo
 mongo = PyMongo(app)
 
 
@@ -168,7 +172,8 @@ def resources():
     return render_template("resources.html")
 
 
+# Telling application how and where to run application
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=False)
+            debug=True)
