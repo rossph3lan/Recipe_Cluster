@@ -8,7 +8,7 @@ from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 
 # Creating a instance of Flask
-app = Flask(__name__)
+app = Flask(__name__, template_folder="../templates")
 
 # Connecting to MongoDB
 
