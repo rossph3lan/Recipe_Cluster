@@ -42,7 +42,7 @@ Search though other users recipes for inspiration. Our aim is to keep your recip
 
 1. **Navbar**
 
-* The navbar is made up of 5 Links : Clickable Logo, All Recipes, My Recipes, Add Recipes, Resources.
+* The navbar is made up of 5 Links : Clickable Logo, All Recipes, My Recipes and Add Recipes.
 When logged in "Log Out" is displayed in the navbar. When not logged in we have a "Sign up" and "Log In" links also
 displayed in the navbar. I chose green for the colour of the navbar as it is the colour symbolized with health and also most fresh produce "Eat your greens".
 
@@ -66,10 +66,6 @@ Cuisine, Type, Ingredients and more. The form appears on both the "Add Recipe Pa
 
 * The collapsible recipe list shows the user the recipes that have been added to the application along with another collapsible recipe list on the users profile page.
 The list on the users page is just the recipes they have created themselves. The collapsible also has a delete and edit button, only available to the user who created them.
-
-6. **Resources Page**
-
-* The resources page has links to various blogs, YouTube channels, books, equipment and ingredient sites I thought the user would enjoy or benefit from.
 
 7. Sign Up, Login, Logout
 
@@ -299,8 +295,6 @@ I used various resources to find the information I was seeking.
 * Watched YouTube videos explaining some **Technologies** I've listed previously.
 
 * Followed a series of videos by **The Code Institute** on how to make a CRUD application.
-
-* I used Google to find out information about the links on "Resources Page"
 
 ### Media
 

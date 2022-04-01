@@ -1,23 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <!--Page Header-->
+    <!--Page header-->
     <h3 class="green-text center-align">Edit Recipe</h3>
      
-    <!--Page Image-->
+    <!--Page image-->
     <div class="image">
         <img src={{ url_for('static', filename='images/recipe_cluster_edit_recipe_image.jpg')}} alt="Afternoon Tea">
     </div>
 
-    <!--Page Paragraph-->
+    <!--Page paragraph-->
     <div class="page_paragraph">
         <p>Edit your recipe here.</p>  
     </div>
 
-    <!--Recipe Form-->
+    <!--Recipe form-->
     <div class="row card-panel grey lighten-5">
         <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
-            <!--Recipe Name-->
+            <!--Recipe name-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-file-signature prefix green-text"></i>
@@ -28,7 +28,7 @@
                     <label for="recipe_name">Recipe</label>
                 </div>
             </div>
-            <!--Cuisine Selector-->
+            <!--Cuisine selector-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-globe-europe prefix green-text"></i>
@@ -50,7 +50,7 @@
                         <label for="recipe_cuisine">Cuisine</label>
                 </div>
             </div>
-            <!--Recipe Type Selector-->
+            <!--Recipe type selector-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-clock prefix green-text"></i>
@@ -71,7 +71,7 @@
                         <label for="recipe_type">Type</label>
                 </div>
             </div>
-            <!--Recipe Time Duration Selector-->
+            <!--Recipe time duration selector-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-stopwatch prefix green-text"></i>
@@ -90,7 +90,7 @@
                         <label for="recipe_time">Time</label>
                 </div>
             </div>
-            <!--Recipe Serving-->
+            <!--Recipe serving-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-utensil-spoon prefix green-text"></i>
@@ -106,7 +106,7 @@
                         <label for="recipe_serving">Serves</label>
                 </div>
             </div>       
-            <!--Allergyn Selection-->
+            <!--Allergyn selection-->
             <div class="row">
                 <div class="input-field col s12">
                 <i class="fas fa-bacterium prefix green-text"></i>
@@ -130,7 +130,7 @@
                 <label for="recipe_allergens">Allergens</label>
                 </div>
             </div>
-            <!--Recipe Ingredients-->
+            <!--Recipe ingredients-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-apple-alt prefix green-text"></i>
@@ -140,7 +140,7 @@
                     <label for="recipe_ingredients">Ingredients</label>
                 </div>
             </div>
-            <!--Recipe Equipment-->
+            <!--Recipe equipment-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-utensils prefix green-text"></i>
@@ -150,7 +150,7 @@
                     <label for="recipe_equipment">Equipment</label>
                 </div>
             </div>
-            <!--Recipe Method-->
+            <!--Recipe method-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-angle-double-down prefix green-text"></i>
@@ -160,7 +160,7 @@
                     <label for="recipe_method">Method</label>
                 </div>
             </div>
-            <!--Recipe Notes-->
+            <!--Recipe notes-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-sticky-note prefix green-text"></i>
@@ -170,10 +170,10 @@
                     <label for="recipe_notes">Notes</label>
                 </div>
             </div>
-            <!--Submit Button-->
+            <!--Submit button-->
             <div class="row">
                 <div class="col s12 center-align">
-                    <!--Cancel Button-->
+                    <!--Cancel button-->
                     <a href="{{ url_for('get_recipes') }}" class="btn-large red text-shadow">
                         Cancel Changes <i class="fas fa-times-circle right"></i>
                     </a>

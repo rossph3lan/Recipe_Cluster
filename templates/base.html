@@ -16,7 +16,7 @@
 
     <!--Header-->
 	<header>      
-    <!-- Top Navbar -->
+    <!-- Top navbar -->
         <nav class="nav-extended text-shadow green">
             <div class="nav-wrapper">
                 <a href="{{ url_for('get_recipes') }}" class="brand-logo left">Recipe Cluster</a>
@@ -26,7 +26,6 @@
             {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}">My Recipes</a></li>
                 <li><a href="{{ url_for('add_recipe') }}">Add Recipes</a></li>
-                <li><a href="{{ url_for('resources') }}">Resources</a></li>
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
                 <li><a href="{{ url_for('login') }}">Log In</a></li>
@@ -35,14 +34,13 @@
                 </ul>
             </div>
         </nav>
-        <!-- Mobile Sidenav -->
+        <!-- Mobile sidenav -->
         <ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align green-text">Recipe Cluster</h4></li>
             <li><a href="{{ url_for('get_recipes') }}" class="green-text">All Recipes</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}" class="green-text">My Recipes</a></li>
                 <li><a href="{{ url_for('add_recipe') }}" class="green-text">Add Recipes</a></li>
-                <li><a href="{{ url_for('resources') }}" class="green-text">Resources</a></li>
                 <li><a href="{{ url_for('logout') }}" class="green-text">Log Out</a></li>
             {% else %}
                 <li><a href="{{ url_for('login') }}" class="green-text">Log In</a></li>
@@ -53,7 +51,7 @@
 
     <!--Section-->
     <section>
-        <!-- Flash Messages -->
+        <!-- Flash messages -->
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}

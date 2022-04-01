@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <!--Displays Users Name-->
+    <!--Displays users name-->
     <div class="row">
         <div class="col s12 m8 offset-m2">
             <div class="card-panel">
@@ -12,19 +12,19 @@
         </div>
     </div>
 
-    <!--Page Image-->
+    <!--Page image-->
     <div class="image">
         <img src={{ url_for('static', filename='images/recipe_cluster_my_recipe_image.jfif')}} alt="Healthy Breakfast">
     </div>
 
-    <!--Page Paragraph-->
+    <!--Page paragraph-->
     <div class="page_paragraph">
         <p>
             Here are all your saved recipes. View, edit or delete them.
         </p>
     </div>
 
-    <!--My Recipe Search Box-->
+    <!--My recipe search box-->
     <div class="row card-panel grey lighten-5">
         <form action="{{ url_for('search') }}" method="post" class="col s12">
             <div class="row valign-wrapper center-align">
@@ -43,7 +43,7 @@
         </form>
     </div>
 
-    <!--Recipes Added By Me-->
+    <!--Recipes added by user-->
         <ul class="collapsible">
             {% if recipes|length > 0 %}
             {% for recipe in recipes %}
@@ -74,7 +74,6 @@
                 {% endfor %}
         </ul>
         {% else %}
-
     <h3 class="red-text center-align">No Results Found</h3>
     {% endif %}
 

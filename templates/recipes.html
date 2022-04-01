@@ -1,22 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <!--Page Header-->
+    <!--Page header-->
     <h3 class="green-text center-align">All Recipes</h3>
 
-    <!--Page Image-->
+    <!--Page image-->
     <div class="image">
         <img src={{ url_for('static', filename='images/recipe_cluster_home_image.jfif') }} alt="Bowl Food">
     </div>
     
-    <!--Page Paragraph-->
+    <!--Page paragraph-->
     <div class="page_paragraph">
         <p>
         {% if session.user %}
             Welcome to Recipe Cluster, store your favourite recipes and explore others.<br>
             Search recipes based on Cuisine, Ingredients and type of meal.<br>
             Adding your recipes has never been so easy, may you never forget that tasty dish again!<br>
-            Check out our <a href="{{ url_for('resources') }}">Resources</a> to learn some new skills and level up your inner chef !
         {% else %}
             <a href="{{ url_for('login') }}">Login</a> to your account, or <a href="{{ url_for('sign_up') }}">Sign Up</a> with us to start creating and sharing those delicious meals!
         {% endif %}
@@ -24,7 +23,7 @@
     
     </div>
 
-    <!--Search Box--> 
+    <!--Search box--> 
     <div class="row card-panel grey lighten-5">
         <form action="{{ url_for('search') }}" method="post" class="col s12">
             <div class="row valign-wrapper center-align">
@@ -43,7 +42,7 @@
         </form>
     </div>
 
-    <!--Recipes Added By Users-->
+    <!--Recipes added by users-->
     {% if recipes|length > 0 %}
     <ul class="collapsible">
         {% for recipe in recipes %}

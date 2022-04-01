@@ -22,6 +22,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# Recipes template
 @app.route("/")
 @app.route("/recipes")
 def get_recipes():
@@ -29,6 +30,7 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+# Search
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -36,6 +38,7 @@ def search():
     return render_template("recipes.html", recipes=recipes)
 
 
+# Sign In
 @app.route("/sign_up", methods=["GET", "POST"])
 def sign_up():
     if request.method == "POST":
@@ -61,6 +64,7 @@ def sign_up():
     return render_template("sign_up.html")
 
 
+# Log in
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -90,6 +94,7 @@ def login():
     return render_template("login.html")
 
 
+# Profile
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     recipes = list(mongo.db.recipes.find({'created_by': session['user']}))
@@ -103,6 +108,7 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+# Logout
 @app.route("/logout")
 def logout():
     # remove user from session cookie
@@ -111,6 +117,7 @@ def logout():
     return redirect(url_for("login"))
 
 
+# Add recipe
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
@@ -135,6 +142,7 @@ def add_recipe():
         return render_template("add_recipe.html", categories=categories)
 
 
+# Edit recipe
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
@@ -160,16 +168,12 @@ def edit_recipe(recipe_id):
     return render_template("edit_recipe.html", recipe=recipe, categories=categories)
 
 
+# Delete recipe
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted")
     return redirect(url_for("get_recipes"))
-
-
-@app.route("/resources")
-def resources():
-    return render_template("resources.html")
 
 
 # Telling application how and where to run application
