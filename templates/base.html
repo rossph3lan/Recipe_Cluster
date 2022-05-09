@@ -36,7 +36,7 @@
         </nav>
         <!-- Mobile sidenav -->
         <ul class="sidenav" id="mobile-demo">
-            <li><h4 class="center-align green-text">Recipe Cluster</h4></li>
+            <li><a href="{{ url_for('get_recipes') }}"><h4 class="center-align green-text">Recipe Cluster</h4></a></li>
             <li><a href="{{ url_for('get_recipes') }}" class="green-text">All Recipes</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}" class="green-text">My Recipes</a></li>
